@@ -1,8 +1,12 @@
-# prospective-prov
+# Prospective-prov
 
 Copyright (c) 2019 Universidade Federal Fluminense (UFF). All rights reserved.
 
-# License Terms
+## Quick Installation
+
+## Basic Usage
+
+## License Terms
 The MIT License (MIT)
 
 Copyright (c) 2019 Universidade Federal Fluminense (UFF). All rights reserved.
