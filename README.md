@@ -2,6 +2,12 @@
 
 Copyright (c) 2019 Universidade Federal Fluminense (UFF). All rights reserved.
 
+ProspectiveProv is a provenance visualization tool that uses provenance data collected by 
+[noWorkflow](https://github.com/gems-uff/noworkflow) to generate a provenance graph based on the prospective provenance, allowing scientists to obtain details about the scientific experiments developed in Python. We expect that prospectiveProv can be helpful to allow developers and scientists to have a better understanding of the programming structure of Python script experiments. 
+
+Using prospectiveProv is simple. For generate provenance graphs using prospectiveProv, the users only need to run a Python script experiment using [noWorkflow](https://github.com/gems-uff/noworkflow) and perform prospectiveProv right away. Currently, this version of prospectiveProv supports [Python 3.6](https://www.python.org/downloads/release/python-360/) and [noWorkflow-2.0 Alpha](https://github.com/gems-uff/noworkflow/tree/2.0-alpha).
+
+
 ## Quick Installation
 
 ## Basic Usage
