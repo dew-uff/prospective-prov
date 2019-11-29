@@ -9,8 +9,8 @@ Using prospectiveProv is simple. For generate provenance graphs using prospectiv
 
 
 Developers:
-[Vítor Gama Lemos (UFF)](https://github.com/vitorglemos)
-[Charles Luiz de Souza Mendes (UFF)]
+- [Vítor Gama Lemos (UFF)](https://github.com/vitorglemos)
+- [Charles Luiz de Souza Mendes (UFF)]()
 
 ## System Requirement
    - [Python 3.6](https://www.python.org/downloads/release/python-360/)
