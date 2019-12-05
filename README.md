@@ -20,6 +20,30 @@ Developers:
 ## Quick Installation
 
 ## Basic Usage
+To use the ProspectiveProv, you must execute your script Python using noWorkflow. After running your script, in the ".noworkflow" folder, you could call the prospectiveProv as follow: 
+```
+prospective trial <trial_id> 
+```
+After that, the prospectiveProv will use the information available in the SQLite database created by noWorkflow to generate a provenance graph based on script structure, displaying calls, functions, conditional sentences, loops, variables, and classes.
+
+To see all functions available in ProspectiveProv, just run the following command:
+```
+prospective --help 
+```
+### Inspecting variables
+
+To check the contents of all variables in the provenance graph, just run the command:
+```
+prospective --trial <id> --var 1 
+```
+### Showing executed code blocks
+
+ProspectiveProv also allows to display in the provenance graph all lines of code that are activated during the execution of the script, just type:
+```
+prospective --trial <id> --act 1 
+```
+
+### 
 
 ## License Terms
 The MIT License (MIT)
