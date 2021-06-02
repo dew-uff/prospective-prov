@@ -7,11 +7,6 @@ ProspectiveProv is a provenance visualization tool that uses provenance data col
 
 Using prospectiveProv is simple. For generate provenance graphs using prospectiveProv, the users only need to run a Python script experiment using [noWorkflow](https://github.com/gems-uff/noworkflow) and perform prospectiveProv right away. Currently, this version of prospectiveProv supports [Python 3.6](https://www.python.org/downloads/release/python-360/) and [noWorkflow-2.0 Alpha](https://github.com/gems-uff/noworkflow/tree/2.0-alpha).
 
-
-Developers:
-- [Vítor Gama Lemos (UFF)](https://github.com/vitorglemos)
-- [Charles Luiz de Souza Mendes (UFF)](https://www.linkedin.com/in/charles-mendes-0a790bb6/)
-
 ## System Requirement
    - [Python 3.6](https://www.python.org/downloads/release/python-360/)
    - [noWorkflow-2.0](https://github.com/gems-uff/noworkflow/tree/2.0-alpha)
@@ -22,25 +17,25 @@ Developers:
 ## Basic Usage
 To use the ProspectiveProv, you must execute your script Python using noWorkflow. After running your script, in the ".noworkflow" folder, you could call the prospectiveProv as follow: 
 ```
-prospective trial <trial_id> 
+$ prospective.py trial <trial_id> --dir .noworkflow/db.sqlite 
 ```
 After that, the prospectiveProv will use the information available in the SQLite database created by noWorkflow to generate a provenance graph based on script structure, displaying calls, functions, conditional sentences, loops, variables, and classes.
 
 To see all functions available in ProspectiveProv, just run the following command:
 ```
-prospective --help 
+$ prospective.py --help 
 ```
 ### Inspecting variables
 
 To check the contents of all variables in the provenance graph, just run the command:
 ```
-prospective --trial <id> --var 1 
+$ prospective.py --trial <id> --var 1 --dir .noworkflow/db.sqlite
 ```
 ### Showing executed code blocks
 
 ProspectiveProv also allows to display in the provenance graph all lines of code that are activated during the execution of the script, just type:
 ```
-prospective --trial <id> --act 1 
+$ prospective.py --trial <id> --act 1 --dir .noworkflow/db.sqlite
 ```
 
 ### 
