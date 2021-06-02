@@ -1,0 +1,124 @@
+strict digraph {
+	node [color=black fillcolor="#85CBC0" shape=box style=filled]
+	nodesep=0.4 size=15
+	start [label=Start]
+	"1assign1" [label="1: x = 10" fillcolor="#976BAA"]
+	"2assign2" [label="2: y = 20" fillcolor="#976BAA"]
+	"3assign3" [label="3: t = 12" fillcolor="#976BAA"]
+	"4assign4" [label="4: array = []" fillcolor="#976BAA"]
+	"5for39c" [label=" Variable: i 
+ i in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"5for39" [label="5: for" shape=ellipse]
+	"5for39" -> "5for39c" [arrowhead=none color="#808080" style=dashed]
+	"6for36c" [label=" Variable: j 
+ j in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"6for36" [label="6: for" shape=ellipse]
+	"6for36" -> "6for36c" [arrowhead=none color="#808080" style=dashed]
+	"7for9c" [label=" Variable: k1 
+ k1 in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"7for9" [label="7: for" shape=ellipse]
+	"7for9" -> "7for9c" [arrowhead=none color="#808080" style=dashed]
+	"8assign8" [label="8: t = t - 1" fillcolor="#976BAA"]
+	"9assign9" [label="9: t = t - 2" fillcolor="#976BAA"]
+	"11for22c" [label=" Variable: k2 
+ k2 in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"11for22" [label="11: for" shape=ellipse]
+	"11for22" -> "11for22c" [arrowhead=none color="#808080" style=dashed]
+	"12assign12" [label="12: t = t - k2" fillcolor="#976BAA"]
+	"13if17c" [label=" Condition:
+  t == 10" color="#808080" fillcolor=white shape=note]
+	"13if17" [label="13: if" shape=diamond]
+	"13if17" -> "13if17c" [arrowhead=none color="#808080" style=dashed]
+	"14assign14" [label="14: t = 1" fillcolor="#976BAA"]
+	"15else3" [label="15: else"]
+	"16for17c" [label=" Variable: k3 
+ k3 in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"16for17" [label="16: for" shape=ellipse]
+	"16for17" -> "16for17c" [arrowhead=none color="#808080" style=dashed]
+	"17call17" [label="17: array.append(k3)"]
+	"19for20c" [label=" Variable: t 
+ t in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"19for20" [label="19: for" shape=ellipse]
+	"19for20" -> "19for20c" [arrowhead=none color="#808080" style=dashed]
+	"20call20" [label="20: array.append(t)"]
+	"22assign22" [label="22: t = 0" fillcolor="#976BAA"]
+	"24for35c" [label=" Variable: k3 
+ k3 in range(0, 1)" color="#808080" fillcolor=white shape=note]
+	"24for35" [label="24: for" shape=ellipse]
+	"24for35" -> "24for35c" [arrowhead=none color="#808080" style=dashed]
+	"25if34c" [label=" Condition:
+  k3 == 0" color="#808080" fillcolor=white shape=note]
+	"25if34" [label="25: if" shape=diamond]
+	"25if34" -> "25if34c" [arrowhead=none color="#808080" style=dashed]
+	"26call26" [label="26: print(10)"]
+	"27else3" [label="27: else"]
+	"28if32c" [label=" Condition:
+  k3 == 1" color="#808080" fillcolor=white shape=note]
+	"28if32" [label="28: if" shape=diamond]
+	"28if32" -> "28if32c" [arrowhead=none color="#808080" style=dashed]
+	"29call29" [label="29: print(20)"]
+	"30else4" [label="30: else"]
+	"31if32c" [label=" Condition:
+  k3 == 2" color="#808080" fillcolor=white shape=note]
+	"31if32" [label="31: if" shape=diamond]
+	"31if32" -> "31if32c" [arrowhead=none color="#808080" style=dashed]
+	"32call32" [label="32: print(30)"]
+	"34assign34" [label="34: x = 10" fillcolor="#976BAA"]
+	"35assign35" [label="35: x = 5" fillcolor="#976BAA"]
+	"36assign36" [label="36: x = 4" fillcolor="#976BAA"]
+	"38for39c" [label=" Variable: x 
+ x in range(0, 2)" color="#808080" fillcolor=white shape=note]
+	"38for39" [label="38: for" shape=ellipse]
+	"38for39" -> "38for39c" [arrowhead=none color="#808080" style=dashed]
+	"39call39" [label="39: array.append(x)"]
+	"41call41" [label="41: print('end')"]
+	end [label=End]
+	"39call39" -> "38for39" [style=dashed]
+	"35assign35" -> "24for35" [style=dashed]
+	"20call20" -> "19for20" [style=dashed]
+	"17call17" -> "16for17" [style=dashed]
+	"22assign22" -> "11for22" [style=dashed]
+	"9assign9" -> "7for9" [style=dashed]
+	"36assign36" -> "6for36" [style=dashed]
+	"5for39" -> "41call41" [label=" End Loop"]
+	"6for36" -> "38for39" [label=" End Loop"]
+	"7for9" -> "11for22" [label=" End Loop"]
+	"11for22" -> "24for35" [label=" End Loop"]
+	"16for17" -> "11for22" [label=" End Loop"]
+	"19for20" -> "22assign22" [label=" End Loop"]
+	"24for35" -> "36assign36" [label=" End Loop"]
+	"38for39" -> "5for39" [label=" End Loop"]
+	start -> "1assign1"
+	"1assign1" -> "2assign2"
+	"2assign2" -> "3assign3"
+	"3assign3" -> "4assign4"
+	"4assign4" -> "5for39"
+	"5for39" -> "6for36"
+	"6for36" -> "7for9"
+	"7for9" -> "8assign8"
+	"8assign8" -> "9assign9"
+	"11for22" -> "12assign12"
+	"12assign12" -> "13if17"
+	"13if17" -> "14assign14" [label="   True"]
+	"14assign14" -> "11for22" [style=dashed]
+	"13if17" -> "15else3" [label="   False"]
+	"15else3" -> "16for17"
+	"16for17" -> "17call17"
+	"17call17" -> "19for20"
+	"19for20" -> "20call20"
+	"24for35" -> "25if34"
+	"25if34" -> "26call26" [label="   True"]
+	"26call26" -> "24for35" [style=dashed]
+	"25if34" -> "27else3" [label="   False"]
+	"27else3" -> "28if32"
+	"28if32" -> "29call29" [label="   True"]
+	"29call29" -> "24for35" [style=dashed]
+	"28if32" -> "30else4" [label="   False"]
+	"30else4" -> "31if32"
+	"31if32" -> "32call32" [label="   True"]
+	"31if32" -> "34assign34" [label="   False"]
+	"32call32" -> "34assign34"
+	"34assign34" -> "35assign35"
+	"38for39" -> "39call39"
+	"41call41" -> end
+}

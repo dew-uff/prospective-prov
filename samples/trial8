@@ -1,0 +1,24 @@
+strict digraph {
+	node [color=black fillcolor="#85CBC0" shape=box style=filled]
+	nodesep=0.4 size=15
+	start [label=Start]
+	"1assign1" [label="1: x = 10" fillcolor="#976BAA"]
+	"3if6c" [label=" Condition:
+  x == 10" color="#808080" fillcolor=white shape=note]
+	"3if6" [label="3: if" shape=diamond]
+	"3if6" -> "3if6c" [arrowhead=none color="#808080" style=dashed]
+	"4assign4" [label="4: x = x + 1" fillcolor="#976BAA"]
+	"5else0" [label="5: else"]
+	"6assign6" [label="6: x = x - 1" fillcolor="#976BAA"]
+	end [label=End]
+	"5else0" [fillcolor="#EBEBEB"]
+	"6assign6" [fillcolor="#EBEBEB"]
+	end [fillcolor="#85CBD0"]
+	start -> "1assign1"
+	"1assign1" -> "3if6"
+	"3if6" -> "4assign4" [label="   True"]
+	"4assign4" -> end
+	"3if6" -> "5else0" [label="   False"]
+	"5else0" -> "6assign6"
+	"6assign6" -> end
+}

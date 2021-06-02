@@ -1,0 +1,40 @@
+strict digraph {
+	node [color=black fillcolor="#85CBC0" shape=box style=filled]
+	nodesep=0.4 size=15
+	start [label=Start]
+	"1assign1" [label="1: x = 10" fillcolor="#976BAA"]
+	"2assign2" [label="2: y = 0" fillcolor="#976BAA"]
+	"4if7c" [label=" Condition:
+  x == 10" color="#808080" fillcolor=white shape=note]
+	"4if7" [label="4: if" shape=diamond]
+	"4if7" -> "4if7c" [arrowhead=none color="#808080" style=dashed]
+	"5assign5" [label="5: x = x + 1" fillcolor="#976BAA"]
+	"6else0" [label="6: else"]
+	"7assign7" [label="7: x = x - 1" fillcolor="#976BAA"]
+	"9if12c" [label=" Condition:
+  x > 10" color="#808080" fillcolor=white shape=note]
+	"9if12" [label="9: if" shape=diamond]
+	"9if12" -> "9if12c" [arrowhead=none color="#808080" style=dashed]
+	"10assign10" [label="10: y = 0" fillcolor="#976BAA"]
+	"11else0" [label="11: else"]
+	"12assign12" [label="12: y = 1" fillcolor="#976BAA"]
+	end [label=End]
+	"6else0" [fillcolor="#EBEBEB"]
+	"7assign7" [fillcolor="#EBEBEB"]
+	"11else0" [fillcolor="#EBEBEB"]
+	"12assign12" [fillcolor="#EBEBEB"]
+	end [fillcolor="#85CBD0"]
+	start -> "1assign1"
+	"1assign1" -> "2assign2"
+	"2assign2" -> "4if7"
+	"4if7" -> "5assign5" [label="   True"]
+	"5assign5" -> "9if12"
+	"4if7" -> "6else0" [label="   False"]
+	"6else0" -> "7assign7"
+	"7assign7" -> "9if12"
+	"9if12" -> "10assign10" [label="   True"]
+	"10assign10" -> end
+	"9if12" -> "11else0" [label="   False"]
+	"11else0" -> "12assign12"
+	"12assign12" -> end
+}
