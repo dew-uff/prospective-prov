@@ -17,25 +17,25 @@ Using prospectiveProv is simple. For generate provenance graphs using prospectiv
 ## Basic Usage
 To use the ProspectiveProv, you must execute your script Python using noWorkflow. After running your script, in the ".noworkflow" folder, you could call the prospectiveProv as follow: 
 ```
-$ prospective.py trial <trial_id> --dir .noworkflow/db.sqlite 
+$ python prospective.py trial <trial_id> --dir .noworkflow/db.sqlite 
 ```
 After that, the prospectiveProv will use the information available in the SQLite database created by noWorkflow to generate a provenance graph based on script structure, displaying calls, functions, conditional sentences, loops, variables, and classes.
 
 To see all functions available in ProspectiveProv, just run the following command:
 ```
-$ prospective.py --help 
+$ python prospective.py --help 
 ```
 ### Inspecting variables
 
 To check the contents of all variables in the provenance graph, just run the command:
 ```
-$ prospective.py --trial <id> --var 1 --dir .noworkflow/db.sqlite
+$ python prospective.py --trial <id> --var 1 --dir .noworkflow/db.sqlite
 ```
 ### Showing executed code blocks
 
 ProspectiveProv also allows to display in the provenance graph all lines of code that are activated during the execution of the script, just type:
 ```
-$ prospective.py --trial <id> --act 1 --dir .noworkflow/db.sqlite
+$ python prospective.py --trial <id> --act 1 --dir .noworkflow/db.sqlite
 ```
 
 ### 
